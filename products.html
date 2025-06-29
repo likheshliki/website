@@ -1,0 +1,102 @@
+<!-- templates/products.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Crazy Products - Tech Gadget Store</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(135deg, #6f00ff, #ff5f6d);
+            color: #fff;
+            animation: moveBg 10s linear infinite;
+        }
+
+        @keyframes moveBg {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 3rem;
+            animation: neon 1.5s infinite alternate;
+        }
+
+        @keyframes neon {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #ff0, 0 0 30px #ff0;
+            }
+
+            to {
+                text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+            }
+        }
+
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px dashed #fff;
+            border-radius: 20px;
+            padding: 30px;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.4s ease, background 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .product-card:hover {
+            transform: scale(1.1) rotate(-3deg);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: #ffeb3b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🚀 Our Crazy Products 🚀</h1>
+    <div class="products-container">
+        <!-- Example product -->
+        <div class="product-card">
+            <div class="product-title">Smart Watch</div>
+            <div class="product-price">$99</div>
+        </div>
+        <div class="product-card">
+            <div class="product-title">Drone Pro</div>
+            <div class="product-price">$399</div>
+        </div>
+        <div class="product-card">
+            <div class="product-title">VR Headset</div>
+            <div class="product-price">$199</div>
+        </div>
+        <!-- Add dynamic items via Flask here -->
+    </div>
+</body>
+
+</html>
